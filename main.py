@@ -101,7 +101,7 @@ with col1:
         st.title(f"Probeta {probeta + 1}")
         fuerza = st.number_input("Fuerza maxima (KN)", key=probeta)
         diametro = st.number_input("Diametro (mm)", key=probeta, min_value=10.0, step=0.1)
-        area = (math.pi*(diametro / 1000)**2) / 2
+        area = (math.pi*(diametro / 1000)**2) / 4
         esfuerzo = (fuerza / 1000) / area
         probetas_falladas.append(dict(fuerza=fuerza, diametro=diametro, esfuerzo=esfuerzo))
     
